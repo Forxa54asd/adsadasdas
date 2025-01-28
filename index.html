@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMMORTAL Gang</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #333);
+      color: #fff;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 15px 15px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .discord-link {
+      color: #7289da;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .discord-link:hover {
+      color: #fff;
+      background: #7289da;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery section {
+      background: #1f1f1f;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery section h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .item {
+      text-align: center;
+      margin: 10px 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .item p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .modal .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s;
+    }
+
+    .modal .close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>IMMORTAL Gang</h1>
+    <a href="https://discord.gg/yourdiscordlink" class="discord-link">Join Our Discord</a>
+  </header>
+  
+  <main class="gallery">
+    <section>
+      <h2>สูท</h2>
+      <div class="item">
+        <img src="https://media.discordapp.net/attachments/1324420159653544095/1333763465516421142/image.png?ex=679a1386&is=6798c206&hm=e8f5aab271a7ec2c23638f8747f05d1fa4e22f4a5b1c505a41f58806ec86a70c&=&format=webp&quality=lossless&width=985&height=554" alt="Suit 1">
+        <p>Suit Example 1</p>
+      </div>
+      <div class="item">
+        <img src="https://media.discordapp.net/attachments/1324420159653544095/1333763605375615026/image.png?ex=679a13a7&is=6798c227&hm=e69fa80635d6c45ae8f978720f924d3d222992e98e96a792ed891c1d8b265bd1&=&format=webp&quality=lossless&width=985&height=554" alt="Suit 2">
+        <p>Suit Example 2</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>ฮู๊ด</h2>
+      <div class="item">
+        <img src="https://media.discordapp.net/attachments/1324420159653544095/1333762011284246649/image.png?ex=679a122b&is=6798c0ab&hm=2a5c80cd6183de65a6c90ee12269155f980284e759606b899bb6629fda8895af&=&format=webp&quality=lossless" alt="Hood 1">
+        <p>Hood Example 1</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>เสื้อยืด</h2>
+      <div class="item">
+        <img src="https://media.discordapp.net/attachments/1324420159653544095/1333762011284246649/image.png?ex=679a122b&is=6798c0ab&hm=2a5c80cd6183de65a6c90ee12269155f980284e759606b899bb6629fda8895af&=&format=webp&quality=lossless" alt="Hood 1">
+        <p>Shirt Example 1</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>เกราะ</h2>
+      <div class="item">
+        <img src="https://media.discordapp.net/attachments/1324420159653544095/1333762011284246649/image.png?ex=679a122b&is=6798c0ab&hm=2a5c80cd6183de65a6c90ee12269155f980284e759606b899bb6629fda8895af&=&format=webp&quality=lossless" alt="Hood 1">
+        <p>Armour</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal">
+    <span class="close-btn">&times;</span>
+    <img src="" alt="Expanded Image">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.querySelector(".modal");
+      const modalImg = modal.querySelector("img");
+      const closeModal = modal.querySelector(".close-btn");
+      const images = document.querySelectorAll(".item img");
+
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modalImg.src = img.src;
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) modal.style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>
